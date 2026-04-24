@@ -68,7 +68,7 @@ h2 {
 /* TABLA */
 .tabla {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 50% 50%;
     gap: 15px;
 }
 
@@ -96,15 +96,95 @@ h2 {
     font-size: 14px;
 }
 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background-color: #eef1f5;
+    color: #2c3e50;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+    background-color: #1f2d3d;
+    padding: 15px;
+    text-align: center;
+}
+
+.btn {
+    background-color: #2e86de;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* CONTENIDO */
+.container {
+    flex: 1;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* INPUT */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    padding: 10px;
+    width: 150px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* TABLA */
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla th {
+    background-color: #2e86de;
+    color: white;
+    padding: 12px;
+}
+
+.tabla td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #1f2d3d;
+    color: #bdc3c7;
+    text-align: center;
+    padding: 15px;
+}
+
 /* RESPONSIVE */
-@media (min-width: 600px) {
-    .tabla {
-        grid-template-columns: 1fr 1fr;
+@media (max-width: 600px) {
+    .tabla th, .tabla td {
+        font-size: 14px;
+        padding: 8px;
     }
 }
 
-@media (min-width: 900px) {
-    .tabla {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
