@@ -188,3 +188,75 @@ body {
     }
 }
 
+
+
+.help-text {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+.success {
+    color: #27ae60;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Animación de entrada */
+.animar {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: aparecer 0.4s ease forwards;
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efecto en filas */
+.fila {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.fila:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+/* Botón animado */
+.btn {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.mensaje {
+    display: block;
+    margin-top: 5px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.mensaje.error {
+    color: #e74c3c;
+}
+
+.mensaje.ok {
+    color: #27ae60;
+}
+
+/* INPUT estados */
+.input-error {
+    border: 2px solid #e74c3c;
+}
+
+.input-ok {
+    border: 2px solid #27ae60;
+}
+
